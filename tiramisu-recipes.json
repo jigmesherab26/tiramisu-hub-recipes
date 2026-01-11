@@ -4,7 +4,7 @@
     "image": "images/classic-tiramisu.jpg",
     "servings": 6,
     "prepTime": "30 minutes (+ 4 hours chilling)",
-    "rating": 4.8,
+    "rating": 5,
     "ingredients": [
       { "name": "Mascarpone cheese", "quantity": "500 g" },
       { "name": "Egg yolks", "quantity": "4 large" },
@@ -31,7 +31,7 @@
     "image": "images/chocolate-tiramisu.jpg",
     "servings": 6,
     "prepTime": "35 minutes (+ 4 hours chilling)",
-    "rating": 4.7,
+    "rating": 3,
     "ingredients": [
       { "name": "Mascarpone cheese", "quantity": "500 g" },
       { "name": "Egg yolks", "quantity": "4 large" },
@@ -56,7 +56,7 @@
     "image": "images/pistachio-tiramisu.jpg",
     "servings": 6,
     "prepTime": "40 minutes (+ 4 hours chilling)",
-    "rating": 4.6,
+    "rating": 4,
     "ingredients": [
       { "name": "Mascarpone cheese", "quantity": "500 g" },
       { "name": "Pistachio paste", "quantity": "120 g" },
@@ -82,7 +82,7 @@
     "image": "images/matcha-tiramisu.jpg",
     "servings": 6,
     "prepTime": "35 minutes (+ 4 hours chilling)",
-    "rating": 4.5,
+    "rating": 4,
     "ingredients": [
       { "name": "Mascarpone cheese", "quantity": "500 g" },
       { "name": "Egg yolks", "quantity": "4" },
@@ -107,7 +107,7 @@
     "image": "images/strawberry-tiramisu.jpg",
     "servings": 6,
     "prepTime": "30 minutes (+ 3 hours chilling)",
-    "rating": 4.4,
+    "rating": 5,
     "ingredients": [
       { "name": "Mascarpone cheese", "quantity": "500 g" },
       { "name": "Heavy cream", "quantity": "250 ml" },
@@ -154,7 +154,7 @@
     "image": "images/hazelnut-tiramisu.jpg",
     "servings": 6,
     "prepTime": "35 minutes (+ 4 hours chilling)",
-    "rating": 4.6,
+    "rating": 4,
     "ingredients": [
       { "name": "Mascarpone cheese", "quantity": "500 g" },
       { "name": "Egg yolks", "quantity": "4" },
@@ -178,7 +178,7 @@
     "image": "images/vegan-tiramisu.jpg",
     "servings": 6,
     "prepTime": "40 minutes (+ 4 hours chilling)",
-    "rating": 4.2,
+    "rating": 5,
     "ingredients": [
       { "name": "Vegan mascarpone or cashew cream", "quantity": "500 g" },
       { "name": "Coconut cream", "quantity": "200 ml" },
@@ -202,7 +202,7 @@
     "image": "images/baileys-tiramisu.jpg",
     "servings": 6,
     "prepTime": "30 minutes (+ 4 hours chilling)",
-    "rating": 4.7,
+    "rating": 4,
     "ingredients": [
       { "name": "Mascarpone cheese", "quantity": "500 g" },
       { "name": "Egg yolks", "quantity": "4" },
