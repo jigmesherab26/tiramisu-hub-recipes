@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiramisu Hub</title>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header id="site-header">
+        <div class="header-container">
+            <div class="brand">
+                <img src="images/tiramisu-hub-logo.png" alt="Tiramisu Hub Logo" class="logo">
+                <div class="brand-text">
+                    <h1>Tiramisu Hub</h1>
+                    <p class="tagline">Discover authentic and creative tiramisu recipes, all in one place.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- ===== FEATURED RECIPES SECTION ===== -->
+        <section id="featured-recipes">
+
+            <h2 class="section-title">Featured Recipes</h2>
+
+            <div class="carousel-wrapper">
+
+                <!-- Left Arrow -->
+                <button class="carousel-arrow left-arrow" aria-label="Scroll left">
+                    &#10094;
+                </button>
+
+                <!-- Horizontal Scroll Container -->
+                <div class="recipe-carousel">
+
+                    <!-- Recipe Card -->
+                    <article class="recipe-card">
+                        <img src="images/classic-tiramisu.jpg" alt="Classic Tiramisu">
+                        <div class="card-content">
+                            <h3>Classic Tiramisu</h3>
+                            <p class="rating">★★★★☆</p>
+                            <p class="prep-time">Prep Time: 30 mins</p>
+                            <button class="view-recipe-btn">View Recipe</button>
+                        </div>
+                    </article>
+
+                    <article class="recipe-card">
+                        <img src="images/matcha-tiramisu.jpg" alt="Matcha Tiramisu">
+                        <div class="card-content">
+                            <h3>Matcha Tiramisu</h3>
+                            <p class="rating">★★★★★</p>
+                            <p class="prep-time">Prep Time: 35 mins</p>
+                            <button class="view-recipe-btn">View Recipe</button>
+                        </div>
+                    </article>
+
+                    <article class="recipe-card">
+                        <img src="images/pistachio-tiramisu.jpg" alt="Pistachio Tiramisu">
+                        <div class="card-content">
+                            <h3>Pistachio Tiramisu</h3>
+                            <p class="rating">★★★★☆</p>
+                            <p class="prep-time">Prep Time: 25 mins</p>
+                            <button class="view-recipe-btn">View Recipe</button>
+                        </div>
+                    </article>
+
+                    <article class="recipe-card">
+                        <img src="images/pistachio-tiramisu.jpg" alt="Pistachio Tiramisu">
+                        <div class="card-content">
+                            <h3>Mango Tiramisu</h3>
+                            <p class="rating">★★★★☆</p>
+                            <p class="prep-time">Prep Time: 25 mins</p>
+                            <button class="view-recipe-btn">View Recipe</button>
+                        </div>
+                    </article>
+
+                    <article class="recipe-card">
+                        <img src="images/pistachio-tiramisu.jpg" alt="Pistachio Tiramisu">
+                        <div class="card-content">
+                            <h3>Chocolate Tiramisu</h3>
+                            <p class="rating">★★★★☆</p>
+                            <p class="prep-time">Prep Time: 25 mins</p>
+                            <button class="view-recipe-btn">View Recipe</button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Right Arrow -->
+                <button class="carousel-arrow right-arrow" aria-label="Scroll right">
+                    &#10095;
+                </button>
+
+            </div>
+        </section>
+
+        <!-- ===== RECIPE DETAIL SECTION ===== -->
+        <section id="recipe-detail">
+            <h2 class="recipe-title">Classic Tiramisu</h2>
+
+            <div class="recipe-detail-layout">
+                <button id="close-recipe-detail" aria-label="Close recipe detail">
+                    ✕
+                </button>
+
+                <div class="recipe-image">
+                    <img src="recipe-detail-placeholder.jpg" alt="Classic Tiramisu">
+                </div>
+
+                <div class="recipe-info">
+
+                    <div class="ingredients">
+                        <h3>Ingredients</h3>
+                        <ul>
+                            <li>Mascarpone cheese</li>
+                            <li>Egg yolks</li>
+                            <li>Fine sugar</li>
+                            <li>Ladyfingers</li>
+                            <li>Espresso coffee</li>
+                            <li>Unsweetened cocoa</li>
+                        </ul>
+                    </div>
+
+                    <div class="instructions">
+                        <h3>Instructions</h3>
+                        <ol>
+                            <li>Brew espresso and allow to cool.</li>
+                            <li>Whisk egg yolks and sugar until pale.</li>
+                            <li>Fold mascarpone gently.</li>
+                            <li>Layer soaked ladyfingers and cream.</li>
+                            <li>Finish with cocoa dusting.</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Email Recipe -->
+            <div class="email-recipe">
+                <h3>Send This Recipe</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Send Recipe</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="site-footer">
+        <p>© 2026 Tiramisu Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
