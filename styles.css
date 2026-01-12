@@ -84,6 +84,14 @@ header p {
     position: relative;
 }
 
+/* No visible horizontal scrollbar */
+.recipe-carousel::-webkit-scrollbar {
+    height: 0;
+}
+.recipe-carousel {
+    scrollbar-width: none; /* Firefox */
+}
+
 /* ================= SCROLL ARROWS ================= */
 .carousel-arrow {
     position: absolute;
