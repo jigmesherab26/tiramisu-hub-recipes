@@ -10,6 +10,8 @@
    DOM REFERENCES
 ========================= */
 const carousel = document.querySelector('.recipe-carousel');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
 const recipeTemplate = carousel.querySelector('.recipe-card');
 const recipeDetailSection = document.getElementById('recipe-detail');
 const closeRecipeButton = document.getElementById('close-recipe-detail');
@@ -18,6 +20,33 @@ const closeRecipeButton = document.getElementById('close-recipe-detail');
    INITIAL STATE
 ========================= */
 recipeDetailSection.style.display = 'none';
+
+/* =========================
+   HORIZONTAL SCROLL LOGIC
+========================= */
+
+// Amount to scroll per arrow click (desktop-friendly)
+const scrollAmount = 320;
+
+// Scroll left
+if (leftArrow) {
+    leftArrow.addEventListener('click', () => {
+        carousel.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Scroll right
+if (rightArrow) {
+    rightArrow.addEventListener('click', () => {
+        carousel.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+}
 
 /* =========================
    FETCH JSON DATA
