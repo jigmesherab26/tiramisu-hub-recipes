@@ -15,6 +15,7 @@ const rightArrow = document.querySelector('.right-arrow');
 const recipeTemplate = carousel.querySelector('.recipe-card');
 const recipeDetailSection = document.getElementById('recipe-detail');
 const closeRecipeButton = document.getElementById('close-recipe-detail');
+const featuredRecipesSection = document.getElementById('featured-recipes');
 
 /* =========================
    INITIAL STATE
@@ -101,14 +102,13 @@ function populateRecipeCards(recipes) {
    VIEW RECIPE HANDLER
 ========================= */
 function showRecipeDetail(recipe) {
-    const detailSection = document.getElementById('recipe-detail');
 
     // Header
-    const image = detailSection.querySelector('.recipe-detail-body img');
-    const title = detailSection.querySelector('.recipe-detail-meta h2');
-    const rating = detailSection.querySelector('.detail-rating');
-    const servings = detailSection.querySelector('.detail-servings');
-    const prepTime = detailSection.querySelector('.detail-prep-time');
+    const image = recipeDetailSection.querySelector('.recipe-detail-body img');
+    const title = recipeDetailSection.querySelector('.recipe-detail-meta h2');
+    const rating = recipeDetailSection.querySelector('.detail-rating');
+    const servings = recipeDetailSection.querySelector('.detail-servings');
+    const prepTime = recipeDetailSection.querySelector('.detail-prep-time');
 
     image.src = recipe.image;
     image.alt = recipe.title;
@@ -118,7 +118,7 @@ function showRecipeDetail(recipe) {
     prepTime.textContent = `Prep Time: ${recipe.prepTime}`;
 
     // Ingredients
-    const ingredientsList = detailSection.querySelector('.ingredients ul');
+    const ingredientsList = recipeDetailSection.querySelector('.ingredients ul');
     ingredientsList.innerHTML = '';
 
     recipe.ingredients.forEach(item => {
@@ -128,7 +128,7 @@ function showRecipeDetail(recipe) {
     });
 
     // Instructions
-    const instructionsList = detailSection.querySelector('.instructions ol');
+    const instructionsList = recipeDetailSection.querySelector('.instructions ol');
     instructionsList.innerHTML = '';
 
     recipe.instructions.forEach(step => {
@@ -138,12 +138,15 @@ function showRecipeDetail(recipe) {
     });
 
     // Notes
-    const notes = detailSection.querySelector('.notes p');
+    const notes = recipeDetailSection.querySelector('.notes p');
     notes.textContent = recipe.notes;
 
+    // Hide recipe cards grid
+    featuredRecipesSection.style.display = 'none';
+
     // Show section
-    detailSection.style.display = 'block';
-    detailSection.scrollIntoView({ behavior: 'smooth' });
+    recipeDetailSection.style.display = 'block';
+    recipeDetailSection.scrollIntoView({ behavior: 'smooth' });
 }
 
 
@@ -153,9 +156,9 @@ function showRecipeDetail(recipe) {
 closeRecipeButton.addEventListener('click', () => {
     recipeDetailSection.style.display = 'none';
 
-    document.getElementById('featured-recipes').scrollIntoView({
-        behavior: 'smooth'
-    });
+    // Show recipe cards grid
+    featuredRecipesSection.style.display = 'block';
+    featuredRecipesSection.scrollIntoView({ behavior: 'smooth' });
 });
 
 /* =========================
