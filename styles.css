@@ -22,15 +22,21 @@ html {
 
 body {
     font-family: "Segoe UI", Georgia, serif;
-    background-color: var(--soft-ivory);
-    color: var(--text-primary);
+    background-color: #121212;
+    color: #eaeaea;
     line-height: 1.6;
 }
 
 /* ================= HEADER ================= */
 #site-header {
-    background-color: var(--porcelain-white);
-    border-bottom: 1px solid #e6dfd7;
+    border-bottom: 1px solid #2a2a2a;
+    background-color: #181818;
+    color: #aaaaaa;
+}
+
+header h1,
+header p {
+    color: #f5f1ec;
 }
 
 .header-container {
@@ -51,12 +57,12 @@ body {
 
 .brand-text h1 {
     font-size: 2.1rem;
-    color: var(--cocoa-dark);
+    color: #ffffff;
 }
 
 .tagline {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: #aaaaaa;
 }
 
 /* ================= FEATURED RECIPES ================= */
@@ -64,12 +70,13 @@ body {
     max-width: 1200px;
     margin: 60px auto;
     padding: 0 40px;
+    background-color: #141414;
 }
 
 .section-title {
     font-size: 1.7rem;
     margin-bottom: 30px;
-    color: var(--cocoa-dark);
+    color: #ffffff;
 }
 
 /* Wrapper to position arrows OUTSIDE the cards */
@@ -82,7 +89,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--champagne-gold);
+    background-color: #181818;
     color: #fff;
     border: none;
     font-size: 1.6rem;
@@ -116,7 +123,7 @@ body {
 
 /* Scroll snapping for cards */
 .recipe-card {
-    scroll-snap-align: start;
+    scroll-snap-align: start; 
 }
 
 /* ================= NON-SCROLL STATE ================= */
@@ -139,15 +146,19 @@ This is handled purely via CSS using :has()
 /* ================= RECIPE CARD ================= */
 .recipe-card {
     min-width: 280px;
-    background-color: var(--porcelain-white);
+    background-color: #1e1e1e;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
     border-radius: 12px;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     transition: transform 0.3s ease;
 }
 
 .recipe-card:hover {
     transform: translateY(-4px);
+}
+
+.recipe-card h3 {
+    color: #ffffff;
 }
 
 .recipe-card img {
@@ -162,12 +173,11 @@ This is handled purely via CSS using :has()
 
 .card-content h3 {
     font-size: 1.25rem;
-    color: var(--cocoa-dark);
     margin-bottom: 8px;
 }
 
 .rating {
-    color: var(--champagne-gold);
+    color: #d4af37; /* gold accent */
     margin-bottom: 6px;
 }
 
@@ -179,8 +189,8 @@ This is handled purely via CSS using :has()
 
 /* Rounded View Recipe Button */
 .view-recipe-btn {
-    background-color: var(--espresso);
-    color: #fff;
+    background-color: #fbf8f4;
+    color: #1a1a1a;
     border: none;
     padding: 12px;
     width: 100%;
@@ -191,17 +201,18 @@ This is handled purely via CSS using :has()
 }
 
 .view-recipe-btn:hover {
-    background-color: var(--champagne-gold);
+    background-color: #d4af37;
 }
 
 /* ============================
    Recipe Detail Section
 ============================ */
 #recipe-detail {
+    background-color: #1b1b1b;
+    color: #eaeaea;
     max-width: 1100px;
     margin: 4rem auto;
     padding: 2.5rem;
-    background: #fffaf5;
     border-radius: 16px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     position: relative;
@@ -216,6 +227,11 @@ This is handled purely via CSS using :has()
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: #f0f0f0;
+}
+
+#close-recipe-detail:hover {
+    color: #d4af37;
 }
 
 /* Header layout */
@@ -225,20 +241,20 @@ This is handled purely via CSS using :has()
     margin-bottom: 2rem;
 }
 
-
 /* Meta info */
 .recipe-detail-meta h2 {
     margin-bottom: 0.5rem;
+    color: #ffffff;
 }
 
 .detail-rating {
-    color: #b38b59;
+    color: #d4af37; /* gold accent */
     font-weight: 600;
 }
 
 .detail-info {
     margin-top: 0.5rem;
-    color: #555;
+    color: #ffffff;
 }
 
 /* Body sections */
@@ -251,7 +267,6 @@ This is handled purely via CSS using :has()
     border-radius: 14px;
     object-fit: cover;
 }
-
 
 .ingredients,
 .instructions,
@@ -270,16 +285,22 @@ This is handled purely via CSS using :has()
     line-height: 1.6;
 }
 
+.ingredients ul li,
+.instructions ol li,
+.notes p {
+    color: #dcdcdc;
+}
+
 /* Notes */
 .notes p {
-    color: #666;
     line-height: 1.7;
 }
 
 /* ================= FOOTER ================= */
 #site-footer {
-    background-color: var(--porcelain-white);
-    border-top: 1px solid #e6dfd7;
+    background-color: #181818;
+    color: #aaaaaa;
+    border-top: 1px solid #2a2a2a;
     text-align: center;
     padding: 24px;
     margin-top: 80px;
