@@ -194,91 +194,98 @@ This is handled purely via CSS using :has()
     background-color: var(--espresso);
 }
 
-/* ================= RECIPE DETAIL ================= */
+/* ============================
+   Recipe Detail Section
+============================ */
 #recipe-detail {
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 40px;
-    background-color: var(--porcelain-white);
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 2.5rem;
+    background: #fffaf5;
     border-radius: 16px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
 }
 
-.recipe-title {
-    font-size: 2.2rem;
-    color: var(--cocoa-dark);
-    margin-bottom: 40px;
-}
-
-.recipe-detail-layout {
-    display: flex;
-    gap: 50px;
-    margin-bottom: 45px;
-}
-
-.recipe-image img {
-    width: 440px;
-    border-radius: 14px;
-}
-
-.ingredients,
-.instructions {
-    margin-bottom: 30px;
-}
-
-.ingredients h3,
-.instructions h3 {
-    color: var(--espresso);
-    margin-bottom: 12px;
-}
-
-/* ================= CLOSE BUTTON (RECIPE DETAIL) ================= */
-#recipe-detail {
-    position: relative; /* Required for absolute positioning of close button */
-}
-
+/* Close button */
 #close-recipe-detail {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: transparent;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: transparent;
     border: none;
-    font-size: 1.4rem;
-    color: var(--text-muted);
+    font-size: 1.5rem;
     cursor: pointer;
-    padding: 6px 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#close-recipe-detail:hover {
-    background-color: var(--soft-ivory);
-    color: var(--cocoa-dark);
-}
-
-
-/* ================= EMAIL ================= */
-.email-recipe {
-    background-color: var(--soft-ivory);
-    padding: 30px;
-    border-radius: 14px;
-}
-
-.email-recipe h3 {
-    color: var(--cocoa-dark);
-    margin-bottom: 15px;
-}
-
-.email-recipe form {
+/* Header layout */
+.recipe-detail-header {
     display: flex;
-    gap: 14px;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
-.email-recipe input[type="email"] {
-    flex: 1;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #d6cec4;
+
+/* Meta info */
+.recipe-detail-meta h2 {
+    margin-bottom: 0.5rem;
+}
+
+.detail-rating {
+    color: #b38b59;
+    font-weight: 600;
+}
+
+.detail-info {
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+/* Body sections */
+.recipe-detail-body h3 {
+    margin-bottom: 0.75rem;
+}
+
+.recipe-detail-body img {
+    width: 320px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+
+.ingredients,
+.instructions,
+.notes {
+    margin-bottom: 2rem;
+}
+
+.ingredients ul,
+.instructions ol {
+    padding-left: 1.25rem;
+}
+
+.ingredients li,
+.instructions li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Notes */
+.notes p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Email section */
+.email-recipe {
+    padding-top: 1.5rem;
+    border-top: 1px solid #e6ded6;
+}
+
+.email-recipe input {
+    padding: 0.6rem;
+    width: 260px;
+    margin-right: 0.5rem;
 }
 
 .email-recipe button {
@@ -294,6 +301,7 @@ This is handled purely via CSS using :has()
 .email-recipe button:hover {
     background-color: var(--espresso);
 }
+
 
 /* ================= FOOTER ================= */
 #site-footer {

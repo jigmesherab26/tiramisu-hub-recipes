@@ -1,35 +1,25 @@
 /* =========================================================
-   Tiramisu Hub - JavaScript Interactivity
-   Author: Tiramisu Hub
-   Description:
-   - Enables horizontal scrolling for featured recipes
-   - Shows recipe detail section on "View Recipe" click
-   - Vanilla JavaScript only
+   Tiramisu Hub – JSON Data Population Script
+   Rules enforced:
+   - No class creation or modification
+   - HTML defines all structure & classes
+   - JS only injects content
 ========================================================= */
 
 /* =========================
-   DOM ELEMENT REFERENCES
+   DOM REFERENCES
 ========================= */
-
-// Carousel elements
 const carousel = document.querySelector('.recipe-carousel');
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
-
-// Recipe detail section
+const recipeTemplate = carousel.querySelector('.recipe-card');
 const recipeDetailSection = document.getElementById('recipe-detail');
-
-// View Recipe buttons
-const viewRecipeButtons = document.querySelectorAll('.view-recipe-btn');
+const closeRecipeButton = document.getElementById('close-recipe-detail');
 
 /* =========================
    INITIAL STATE
 ========================= */
-
-// Hide recipe detail section on page load
-if (recipeDetailSection) {
-    recipeDetailSection.style.display = 'none';
-}
+recipeDetailSection.style.display = 'none';
 
 /* =========================
    HORIZONTAL SCROLL LOGIC
@@ -59,61 +49,120 @@ if (rightArrow) {
 }
 
 /* =========================
-   VIEW RECIPE INTERACTION
+   FETCH JSON DATA
 ========================= */
+fetch('tiramisu-recipes.json')
+    .then(response => response.json())
+    .then(recipes => populateRecipeCards(recipes))
+    .catch(error => console.error('Error loading recipes:', error));
 
-viewRecipeButtons.forEach(button => {
-    button.addEventListener('click', () => {
+/* =========================
+   POPULATE RECIPE CARDS
+========================= */
+function populateRecipeCards(recipes) {
 
-        // Reveal recipe detail section
-        recipeDetailSection.style.display = 'block';
+    // Remove template card from display
+    recipeTemplate.style.display = 'none';
 
-        // Smooth scroll to recipe detail section
-        recipeDetailSection.scrollIntoView({
-            behavior: 'smooth'
+    recipes.forEach((recipe, index) => {
+
+        // Clone template
+        const cardClone = recipeTemplate.cloneNode(true);
+        cardClone.style.display = 'block';
+
+        // Populate content (NO class changes)
+        const image = cardClone.querySelector('img');
+        const title = cardClone.querySelector('h3');
+        const rating = cardClone.querySelector('.rating');
+        const prepTime = cardClone.querySelector('.prep-time');
+        const viewButton = cardClone.querySelector('.view-recipe-btn');
+
+        image.src = recipe.image;
+        image.alt = recipe.title;
+        title.textContent = recipe.title;
+        rating.textContent = formatRating(recipe.rating);
+        prepTime.textContent = `Prep Time: ${recipe.prepTime}`;
+
+        // Store index using dataset (allowed, no class change)
+        viewButton.dataset.index = index;
+
+        viewButton.addEventListener('click', () => {
+            showRecipeDetail(recipe);
         });
 
-        /*
-         NOTE:
-         This is where dynamic recipe loading logic
-         could be added in the future, such as:
-         - Updating title
-         - Updating ingredients
-         - Updating instructions
-         based on the selected card
-        */
+        carousel.appendChild(cardClone);
+    });
+}
+
+/* =========================
+   SHOW RECIPE DETAIL
+========================= */
+/* =========================
+   VIEW RECIPE HANDLER
+========================= */
+function showRecipeDetail(recipe) {
+    const detailSection = document.getElementById('recipe-detail');
+
+    // Header
+    const image = detailSection.querySelector('.recipe-detail-body img');
+    const title = detailSection.querySelector('.recipe-detail-meta h2');
+    const rating = detailSection.querySelector('.detail-rating');
+    const servings = detailSection.querySelector('.detail-servings');
+    const prepTime = detailSection.querySelector('.detail-prep-time');
+
+    image.src = recipe.image;
+    image.alt = recipe.title;
+    title.textContent = recipe.title;
+    rating.textContent = formatRating(recipe.rating);
+    servings.textContent = `Servings: ${recipe.servings}`;
+    prepTime.textContent = `Prep Time: ${recipe.prepTime}`;
+
+    // Ingredients
+    const ingredientsList = detailSection.querySelector('.ingredients ul');
+    ingredientsList.innerHTML = '';
+
+    recipe.ingredients.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name}: ${item.quantity}`;
+        ingredientsList.appendChild(li);
+    });
+
+    // Instructions
+    const instructionsList = detailSection.querySelector('.instructions ol');
+    instructionsList.innerHTML = '';
+
+    recipe.instructions.forEach(step => {
+        const li = document.createElement('li');
+        li.textContent = step;
+        instructionsList.appendChild(li);
+    });
+
+    // Notes
+    const notes = detailSection.querySelector('.notes p');
+    notes.textContent = recipe.notes;
+
+    // Show section
+    detailSection.style.display = 'block';
+    detailSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+
+/* =========================
+   CLOSE RECIPE DETAIL
+========================= */
+closeRecipeButton.addEventListener('click', () => {
+    recipeDetailSection.style.display = 'none';
+
+    document.getElementById('featured-recipes').scrollIntoView({
+        behavior: 'smooth'
     });
 });
 
 /* =========================
-   OPTIONAL UX IMPROVEMENT
+   UTILITIES
 ========================= */
-
-// Hide arrows when scrolling is not possible
-function updateArrowVisibility() {
-    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-
-    leftArrow.style.display = carousel.scrollLeft > 0 ? 'block' : 'none';
-    rightArrow.style.display = carousel.scrollLeft < maxScrollLeft ? 'block' : 'none';
-}
-
-// Update arrows on scroll
-carousel.addEventListener('scroll', updateArrowVisibility);
-
-// Initial arrow visibility check
-updateArrowVisibility();
-
-/* ================= CLOSE RECIPE DETAIL ================= */
-
-const closeRecipeButton = document.getElementById('close-recipe-detail');
-
-if (closeRecipeButton) {
-    closeRecipeButton.addEventListener('click', () => {
-        recipeDetailSection.style.display = 'none';
-
-        // Optional: Scroll back to featured recipes section
-        document.getElementById('featured-recipes').scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+function formatRating(rating) {
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 >= 0.5 ? '½' : '';
+    return '★'.repeat(fullStars) + halfStar;
 }
