@@ -64,56 +64,63 @@
             </div>
         </section>
 
-        <!-- ===== RECIPE DETAIL SECTION ===== -->
+        <!-- Recipe Detail Section -->
         <section id="recipe-detail">
-            <h2 class="recipe-title">Classic Tiramisu</h2>
+            <button id="close-recipe-detail" aria-label="Close recipe">✕</button>
 
-            <div class="recipe-detail-layout">
-                <button id="close-recipe-detail" aria-label="Close recipe detail">
-                    ✕
-                </button>
-
-                <div class="recipe-image">
-                    <img src="recipe-detail-placeholder.jpg" alt="Classic Tiramisu">
-                </div>
-
-                <div class="recipe-info">
-
-                    <div class="ingredients">
-                        <h3>Ingredients</h3>
-                        <ul>
-                            <li>Mascarpone cheese</li>
-                            <li>Egg yolks</li>
-                            <li>Fine sugar</li>
-                            <li>Ladyfingers</li>
-                            <li>Espresso coffee</li>
-                            <li>Unsweetened cocoa</li>
-                        </ul>
-                    </div>
-
-                    <div class="instructions">
-                        <h3>Instructions</h3>
-                        <ol>
-                            <li>Brew espresso and allow to cool.</li>
-                            <li>Whisk egg yolks and sugar until pale.</li>
-                            <li>Fold mascarpone gently.</li>
-                            <li>Layer soaked ladyfingers and cream.</li>
-                            <li>Finish with cocoa dusting.</li>
-                        </ol>
-                    </div>
-
+            <div class="recipe-detail-header">
+                <div class="recipe-detail-meta">
+                    <h2>Classic Italian Tiramisu</h2>
+                    <p class="detail-rating">★★★★★ 4.8</p>
+                    <p class="detail-info">
+                        <span>Servings: 6</span> |
+                        <span>Prep Time: 30 mins</span>
+                    </p>
                 </div>
             </div>
 
-            <!-- Email Recipe -->
-            <div class="email-recipe">
-                <h3>Send This Recipe</h3>
-                <form>
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit">Send Recipe</button>
-                </form>
+            <div class="recipe-detail-body">
+                <img src="images/classic-tiramisu.jpg" alt="Classic Tiramisu">
+                <div class="ingredients">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>Mascarpone cheese: 250 g</li>
+                        <li>Egg yolks: 4</li>
+                        <li>Granulated sugar: 100 g</li>
+                        <li>Ladyfinger biscuits: 200 g</li>
+                        <li>Espresso coffee: 250 ml</li>
+                        <li>Cocoa powder: for dusting</li>
+                    </ul>
+                </div>
+
+                <div class="instructions">
+                    <h3>Instructions</h3>
+                    <ol>
+                        <li>Whisk egg yolks with sugar until pale and creamy.</li>
+                        <li>Fold mascarpone gently into the egg mixture.</li>
+                        <li>Dip ladyfingers briefly into espresso.</li>
+                        <li>Layer biscuits and cream alternately in a dish.</li>
+                        <li>Chill for at least 4 hours.</li>
+                        <li>Dust with cocoa powder before serving.</li>
+                    </ol>
+                </div>
+
+                <div class="notes">
+                    <h3>Notes</h3>
+                    <p>
+                        For best results, prepare the tiramisu a day ahead to allow
+                        flavors to fully develop. Use high-quality espresso and cocoa.
+                    </p>
+                </div>
+
+                <div class="email-recipe">
+                    <h3>Email This Recipe</h3>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="button">Send Recipe</button>
+                </div>
             </div>
         </section>
+
 
     </main>
 
