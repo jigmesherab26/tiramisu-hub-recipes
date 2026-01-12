@@ -179,7 +179,7 @@ This is handled purely via CSS using :has()
 
 /* Rounded View Recipe Button */
 .view-recipe-btn {
-    background-color: var(--cocoa-dark);
+    background-color: var(--espresso);
     color: #fff;
     border: none;
     padding: 12px;
@@ -191,7 +191,7 @@ This is handled purely via CSS using :has()
 }
 
 .view-recipe-btn:hover {
-    background-color: var(--espresso);
+    background-color: var(--champagne-gold);
 }
 
 /* ============================
@@ -275,33 +275,6 @@ This is handled purely via CSS using :has()
     color: #666;
     line-height: 1.7;
 }
-
-/* Email section */
-.email-recipe {
-    padding-top: 1.5rem;
-    border-top: 1px solid #e6ded6;
-}
-
-.email-recipe input {
-    padding: 0.6rem;
-    width: 260px;
-    margin-right: 0.5rem;
-}
-
-.email-recipe button {
-    background-color: var(--champagne-gold);
-    border: none;
-    color: #fff;
-    padding: 12px 26px;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 999px;
-}
-
-.email-recipe button:hover {
-    background-color: var(--espresso);
-}
-
 
 /* ================= FOOTER ================= */
 #site-footer {
