@@ -68,19 +68,55 @@ function populateRecipeCards(recipes) {
 /* =========================
    SHOW RECIPE DETAIL
 ========================= */
+/* =========================
+   VIEW RECIPE HANDLER
+========================= */
 function showRecipeDetail(recipe) {
-    recipeDetailSection.style.display = 'block';
+    const detailSection = document.getElementById('recipe-detail');
 
-    recipeDetailSection.scrollIntoView({
-        behavior: 'smooth'
+    // Header
+    const image = detailSection.querySelector('.recipe-detail-body img');
+    const title = detailSection.querySelector('.recipe-detail-meta h2');
+    const rating = detailSection.querySelector('.detail-rating');
+    const servings = detailSection.querySelector('.detail-servings');
+    const prepTime = detailSection.querySelector('.detail-prep-time');
+
+    image.src = recipe.image;
+    image.alt = recipe.title;
+    title.textContent = recipe.title;
+    rating.textContent = formatRating(recipe.rating);
+    servings.textContent = `Servings: ${recipe.servings}`;
+    prepTime.textContent = `Prep Time: ${recipe.prepTime}`;
+
+    // Ingredients
+    const ingredientsList = detailSection.querySelector('.ingredients ul');
+    ingredientsList.innerHTML = '';
+
+    recipe.ingredients.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name}: ${item.quantity}`;
+        ingredientsList.appendChild(li);
     });
 
-    /*
-      Dynamic recipe detail population
-      (ingredients, instructions, notes)
-      can be safely added here later
-    */
+    // Instructions
+    const instructionsList = detailSection.querySelector('.instructions ol');
+    instructionsList.innerHTML = '';
+
+    recipe.instructions.forEach(step => {
+        const li = document.createElement('li');
+        li.textContent = step;
+        instructionsList.appendChild(li);
+    });
+
+    // Notes
+    const notes = detailSection.querySelector('.notes p');
+    notes.textContent = recipe.notes;
+
+    // Show section
+    detailSection.style.display = 'block';
+    detailSection.scrollIntoView({ behavior: 'smooth' });
 }
+
 
 /* =========================
    CLOSE RECIPE DETAIL
