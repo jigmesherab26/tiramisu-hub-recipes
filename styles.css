@@ -1,12 +1,9 @@
 /* ================= LUXURY PALETTE ================= */
 :root {
-    --cocoa-dark: #2b1e1a;
     --espresso: #3a2621;
-    --champagne-gold: #c6a15b;
+    --champagne-gold: #d4af37;
     --soft-ivory: #fbf8f4;
     --porcelain-white: #ffffff;
-    --text-primary: #2a2a2a;
-    --text-muted: #6b6b6b;
 }
 
 /* ================= GLOBAL ================= */
@@ -26,6 +23,27 @@ body {
     color: #eaeaea;
     line-height: 1.6;
 }
+
+/* ============================
+   Hide Scrollbars (Keep Scrolling Enabled)
+============================ */
+
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar {
+width: 0;
+}
+
+/* Firefox */
+html {
+    scrollbar-width: none;
+
+}
+
+/* Internet Explorer & old Edge */
+html {
+    -ms-overflow-style: none;
+}
+
 
 /* ================= HEADER ================= */
 #site-header {
@@ -57,7 +75,7 @@ header p {
 
 .brand-text h1 {
     font-size: 2.1rem;
-    color: #ffffff;
+    color: var(--porcelain-white);
 }
 
 .tagline {
@@ -76,12 +94,20 @@ header p {
 .section-title {
     font-size: 1.7rem;
     margin-bottom: 30px;
-    color: #ffffff;
+    color: var(--porcelain-white);
 }
 
 /* Wrapper to position arrows OUTSIDE the cards */
 .carousel-wrapper {
     position: relative;
+}
+
+/* No visible horizontal scrollbar */
+.recipe-carousel::-webkit-scrollbar {
+    height: 0;
+}
+.recipe-carousel {
+    scrollbar-width: none; /* Firefox */
 }
 
 /* ================= SCROLL ARROWS ================= */
@@ -158,7 +184,7 @@ This is handled purely via CSS using :has()
 }
 
 .recipe-card h3 {
-    color: #ffffff;
+    color: var(--porcelain-white);
 }
 
 .recipe-card img {
@@ -177,19 +203,19 @@ This is handled purely via CSS using :has()
 }
 
 .rating {
-    color: #d4af37; /* gold accent */
+    color: var(--champagne-gold); /* gold accent */
     margin-bottom: 6px;
 }
 
 .prep-time {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: var(--porcelain-white);
     margin-bottom: 16px;
 }
 
 /* Rounded View Recipe Button */
 .view-recipe-btn {
-    background-color: #fbf8f4;
+    background-color: --soft-ivory;
     color: #1a1a1a;
     border: none;
     padding: 12px;
@@ -201,7 +227,7 @@ This is handled purely via CSS using :has()
 }
 
 .view-recipe-btn:hover {
-    background-color: #d4af37;
+    background-color: var(--champagne-gold);
 }
 
 /* ============================
@@ -231,7 +257,7 @@ This is handled purely via CSS using :has()
 }
 
 #close-recipe-detail:hover {
-    color: #d4af37;
+    color: var(--champagne-gold);
 }
 
 /* Header layout */
@@ -244,17 +270,17 @@ This is handled purely via CSS using :has()
 /* Meta info */
 .recipe-detail-meta h2 {
     margin-bottom: 0.5rem;
-    color: #ffffff;
+    color: var(--porcelain-white);
 }
 
 .detail-rating {
-    color: #d4af37; /* gold accent */
+    color: var(--champagne-gold); /* gold accent */
     font-weight: 600;
 }
 
 .detail-info {
     margin-top: 0.5rem;
-    color: #ffffff;
+    color: var(--porcelain-white);
 }
 
 /* Body sections */
