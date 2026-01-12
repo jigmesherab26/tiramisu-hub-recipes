@@ -27,6 +27,27 @@ body {
     line-height: 1.6;
 }
 
+/* ============================
+   Hide Scrollbars (Keep Scrolling Enabled)
+============================ */
+
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar {
+width: 0;
+}
+
+/* Firefox */
+html {
+    scrollbar-width: none;
+
+}
+
+/* Internet Explorer & old Edge */
+html {
+    -ms-overflow-style: none;
+}
+
+
 /* ================= HEADER ================= */
 #site-header {
     border-bottom: 1px solid #2a2a2a;
