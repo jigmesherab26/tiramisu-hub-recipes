@@ -212,7 +212,7 @@ This is handled purely via CSS using :has()
 
 .prep-time {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: #ffffff;
     margin-bottom: 16px;
 }
 

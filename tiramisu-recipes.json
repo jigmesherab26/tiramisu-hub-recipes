@@ -27,6 +27,55 @@
     "notes": "Traditional recipe uses raw eggs; use pasteurized eggs if preferred."
   },
   {
+    "title": "Matcha Tiramisu",
+    "image": "images/matcha-tiramisu.jpg",
+    "servings": 6,
+    "prepTime": "35 minutes (+ 4 hours chilling)",
+    "rating": 4,
+    "ingredients": [
+      { "name": "Mascarpone cheese", "quantity": "500 g" },
+      { "name": "Egg yolks", "quantity": "4" },
+      { "name": "Sugar", "quantity": "90 g" },
+      { "name": "Heavy cream", "quantity": "200 ml" },
+      { "name": "Matcha powder", "quantity": "2 tbsp" },
+      { "name": "Ladyfinger biscuits", "quantity": "200 g" },
+      { "name": "Warm water", "quantity": "250 ml" }
+    ],
+    "instructions": [
+      "Whisk egg yolks with sugar until thick.",
+      "Blend mascarpone with half of the matcha powder.",
+      "Fold whipped cream into mascarpone mixture.",
+      "Dissolve remaining matcha in warm water.",
+      "Dip ladyfingers in matcha liquid and layer.",
+      "Alternate layers and finish with matcha dusting."
+    ],
+    "notes": "Use culinary-grade matcha for best results."
+  },
+   {
+    "title": "Strawberry Tiramisu",
+    "image": "images/strawberry-tiramisu.jpg",
+    "servings": 6,
+    "prepTime": "30 minutes (+ 3 hours chilling)",
+    "rating": 5,
+    "ingredients": [
+      { "name": "Mascarpone cheese", "quantity": "500 g" },
+      { "name": "Heavy cream", "quantity": "250 ml" },
+      { "name": "Sugar", "quantity": "80 g" },
+      { "name": "Fresh strawberries", "quantity": "400 g" },
+      { "name": "Ladyfinger biscuits", "quantity": "200 g" },
+      { "name": "Strawberry juice", "quantity": "150 ml" }
+    ],
+    "instructions": [
+      "Whip cream with sugar until soft peaks.",
+      "Fold mascarpone into whipped cream.",
+      "Slice strawberries and reserve some for garnish.",
+      "Dip ladyfingers in strawberry juice.",
+      "Layer biscuits, cream, and strawberries.",
+      "Chill before serving."
+    ],
+    "notes": "Best served within 24 hours for freshness."
+  },
+  {
     "title": "Chocolate Tiramisu",
     "image": "images/chocolate-tiramisu.jpg",
     "servings": 6,
@@ -50,6 +99,53 @@
       "Repeat layers and chill before serving."
     ],
     "notes": "Use high-quality dark chocolate for richer flavor."
+  },
+  {
+    "title": "Lemon Tiramisu",
+    "image": "images/lemon-tiramisu.jpg",
+    "servings": 6,
+    "prepTime": "30 minutes (+ 3 hours chilling)",
+    "rating": 4.3,
+    "ingredients": [
+      { "name": "Mascarpone cheese", "quantity": "500 g" },
+      { "name": "Heavy cream", "quantity": "200 ml" },
+      { "name": "Sugar", "quantity": "90 g" },
+      { "name": "Lemon zest", "quantity": "2 lemons" },
+      { "name": "Lemon juice", "quantity": "120 ml" },
+      { "name": "Ladyfinger biscuits", "quantity": "200 g" }
+    ],
+    "instructions": [
+      "Whip cream and sugar until soft.",
+      "Fold mascarpone, lemon zest, and juice into cream.",
+      "Dip ladyfingers lightly in lemon juice.",
+      "Layer biscuits and lemon cream.",
+      "Chill until set."
+    ],
+    "notes": "Light and refreshing variation without coffee."
+  },
+  {
+    "title": "Vegan Tiramisu",
+    "image": "images/vegan-tiramisu.jpg",
+    "servings": 6,
+    "prepTime": "40 minutes (+ 4 hours chilling)",
+    "rating": 5,
+    "ingredients": [
+      { "name": "Vegan mascarpone or cashew cream", "quantity": "500 g" },
+      { "name": "Coconut cream", "quantity": "200 ml" },
+      { "name": "Maple syrup", "quantity": "80 ml" },
+      { "name": "Espresso coffee", "quantity": "250 ml" },
+      { "name": "Vegan ladyfingers", "quantity": "200 g" },
+      { "name": "Cocoa powder", "quantity": "2 tbsp" }
+    ],
+    "instructions": [
+      "Whip coconut cream until fluffy.",
+      "Fold vegan mascarpone with maple syrup.",
+      "Combine with whipped coconut cream.",
+      "Dip biscuits in espresso.",
+      "Layer biscuits and cream.",
+      "Dust with cocoa and chill."
+    ],
+    "notes": "Fully dairy-free and egg-free."
   },
   {
     "title": "Pistachio Tiramisu",
@@ -78,77 +174,28 @@
     "notes": "Top with chopped pistachios for texture."
   },
   {
-    "title": "Matcha Tiramisu",
-    "image": "images/matcha-tiramisu.jpg",
+    "title": "Baileys Tiramisu",
+    "image": "images/baileys-tiramisu.jpg",
     "servings": 6,
-    "prepTime": "35 minutes (+ 4 hours chilling)",
+    "prepTime": "30 minutes (+ 4 hours chilling)",
     "rating": 4,
     "ingredients": [
       { "name": "Mascarpone cheese", "quantity": "500 g" },
       { "name": "Egg yolks", "quantity": "4" },
       { "name": "Sugar", "quantity": "90 g" },
-      { "name": "Heavy cream", "quantity": "200 ml" },
-      { "name": "Matcha powder", "quantity": "2 tbsp" },
-      { "name": "Ladyfinger biscuits", "quantity": "200 g" },
-      { "name": "Warm water", "quantity": "250 ml" }
-    ],
-    "instructions": [
-      "Whisk egg yolks with sugar until thick.",
-      "Blend mascarpone with half of the matcha powder.",
-      "Fold whipped cream into mascarpone mixture.",
-      "Dissolve remaining matcha in warm water.",
-      "Dip ladyfingers in matcha liquid and layer.",
-      "Alternate layers and finish with matcha dusting."
-    ],
-    "notes": "Use culinary-grade matcha for best results."
-  },
-  {
-    "title": "Strawberry Tiramisu",
-    "image": "images/strawberry-tiramisu.jpg",
-    "servings": 6,
-    "prepTime": "30 minutes (+ 3 hours chilling)",
-    "rating": 5,
-    "ingredients": [
-      { "name": "Mascarpone cheese", "quantity": "500 g" },
-      { "name": "Heavy cream", "quantity": "250 ml" },
-      { "name": "Sugar", "quantity": "80 g" },
-      { "name": "Fresh strawberries", "quantity": "400 g" },
-      { "name": "Ladyfinger biscuits", "quantity": "200 g" },
-      { "name": "Strawberry juice", "quantity": "150 ml" }
-    ],
-    "instructions": [
-      "Whip cream with sugar until soft peaks.",
-      "Fold mascarpone into whipped cream.",
-      "Slice strawberries and reserve some for garnish.",
-      "Dip ladyfingers in strawberry juice.",
-      "Layer biscuits, cream, and strawberries.",
-      "Chill before serving."
-    ],
-    "notes": "Best served within 24 hours for freshness."
-  },
-  {
-    "title": "Lemon Tiramisu",
-    "image": "images/lemon-tiramisu.jpg",
-    "servings": 6,
-    "prepTime": "30 minutes (+ 3 hours chilling)",
-    "rating": 4.3,
-    "ingredients": [
-      { "name": "Mascarpone cheese", "quantity": "500 g" },
-      { "name": "Heavy cream", "quantity": "200 ml" },
-      { "name": "Sugar", "quantity": "90 g" },
-      { "name": "Lemon zest", "quantity": "2 lemons" },
-      { "name": "Lemon juice", "quantity": "120 ml" },
+      { "name": "Baileys Irish Cream", "quantity": "100 ml" },
+      { "name": "Espresso coffee", "quantity": "200 ml" },
       { "name": "Ladyfinger biscuits", "quantity": "200 g" }
     ],
     "instructions": [
-      "Whip cream and sugar until soft.",
-      "Fold mascarpone, lemon zest, and juice into cream.",
-      "Dip ladyfingers lightly in lemon juice.",
-      "Layer biscuits and lemon cream.",
-      "Chill until set."
+      "Whisk egg yolks and sugar until pale.",
+      "Fold mascarpone and Baileys into mixture.",
+      "Dip ladyfingers in espresso.",
+      "Layer biscuits and Baileys cream.",
+      "Chill thoroughly before serving."
     ],
-    "notes": "Light and refreshing variation without coffee."
-  },
+    "notes": "Alcohol can be reduced or omitted if desired."
+  },  
   {
     "title": "Coffee Hazelnut Tiramisu",
     "image": "images/hazelnut-tiramisu.jpg",
@@ -172,52 +219,5 @@
       "Refrigerate before serving."
     ],
     "notes": "Pairs well with toasted hazelnut garnish."
-  },
-  {
-    "title": "Vegan Tiramisu",
-    "image": "images/vegan-tiramisu.jpg",
-    "servings": 6,
-    "prepTime": "40 minutes (+ 4 hours chilling)",
-    "rating": 5,
-    "ingredients": [
-      { "name": "Vegan mascarpone or cashew cream", "quantity": "500 g" },
-      { "name": "Coconut cream", "quantity": "200 ml" },
-      { "name": "Maple syrup", "quantity": "80 ml" },
-      { "name": "Espresso coffee", "quantity": "250 ml" },
-      { "name": "Vegan ladyfingers", "quantity": "200 g" },
-      { "name": "Cocoa powder", "quantity": "2 tbsp" }
-    ],
-    "instructions": [
-      "Whip coconut cream until fluffy.",
-      "Fold vegan mascarpone with maple syrup.",
-      "Combine with whipped coconut cream.",
-      "Dip biscuits in espresso.",
-      "Layer biscuits and cream.",
-      "Dust with cocoa and chill."
-    ],
-    "notes": "Fully dairy-free and egg-free."
-  },
-  {
-    "title": "Baileys Tiramisu",
-    "image": "images/baileys-tiramisu.jpg",
-    "servings": 6,
-    "prepTime": "30 minutes (+ 4 hours chilling)",
-    "rating": 4,
-    "ingredients": [
-      { "name": "Mascarpone cheese", "quantity": "500 g" },
-      { "name": "Egg yolks", "quantity": "4" },
-      { "name": "Sugar", "quantity": "90 g" },
-      { "name": "Baileys Irish Cream", "quantity": "100 ml" },
-      { "name": "Espresso coffee", "quantity": "200 ml" },
-      { "name": "Ladyfinger biscuits", "quantity": "200 g" }
-    ],
-    "instructions": [
-      "Whisk egg yolks and sugar until pale.",
-      "Fold mascarpone and Baileys into mixture.",
-      "Dip ladyfingers in espresso.",
-      "Layer biscuits and Baileys cream.",
-      "Chill thoroughly before serving."
-    ],
-    "notes": "Alcohol can be reduced or omitted if desired."
-  }
+  }  
 ]
